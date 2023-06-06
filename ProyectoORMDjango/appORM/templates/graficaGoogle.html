@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(graficar);
+
+      function graficar() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Estudiar',     11],
+          ['Comer',      2],
+          ['Entrenar',  2],
+          ['Ver TV', 2],
+          ['Dormir',    7],
+          ['Leer',    2],
+        ]);
+
+        var options = {
+          title: 'Mis Actividades Diarias',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.BarChart(grafica);
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="grafica" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
