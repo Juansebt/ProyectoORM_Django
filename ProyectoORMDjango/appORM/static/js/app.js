@@ -42,7 +42,7 @@ function graficar() {
 
             var grafica = document.getElementById('grafica');
             
-            var chart = new google.visualization.ColumnChart(grafica);
+            var chart = new google.visualization.AreaChart(grafica);
             
             chart.draw(data, options);
         }
